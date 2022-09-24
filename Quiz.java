@@ -4,37 +4,38 @@ public class Quiz {
 
     static Scanner input = new Scanner(System.in);
 
-    static int menu() {
+    public static int menu() {
         int opcao;
 
-        do {
-            System.out.println("1- INTRUÇÕES");
-            System.out.println("2- JOGAR");
-            System.out.println("3- CRÉDITOS");
-            System.out.println("4- SAIR");
+        System.out.println("1- INTRUÇÕES");
+        System.out.println("2- JOGAR");
+        System.out.println("3- CRÉDITOS");
+        System.out.println("4- SAIR");
 
-            System.out.println("DIGITE A OPÇÃO DESEJADA");
-            opcao = input.nextInt();
+        System.out.println("DIGITE A OPÇÃO DESEJADA");
+        opcao = input.nextInt();
 
-            switch(opcao) {
-                case 1: System.out.println("BEM VINDO AS INSTRUÇÕES DO QUIZ");
+        switch (opcao) {
+            case 1:
+                System.out.println("BEM VINDO AS INSTRUÇÕES DO QUIZ");
                 break;
 
-                case 2: System.out.println("BEM VINDO AO JOGO!");
+            case 2:
+                System.out.println("BEM VINDO AO JOGO!");
                 break;
 
-                case 3: System.out.println("BEM VINDO AOS CRÉDITOS...");
+            case 3:
+                System.out.println("BEM VINDO AOS CRÉDITOS...");
                 break;
 
-                case 4: System.out.println("SAINDO...");
+            case 4:
+                System.out.println("SAINDO...");
                 break;
-            }
+        }
 
-            if (opcao > 4 || opcao < 1) {
-                System.out.println("OPÇÃO INVÁLIDA");
-            }
-
-        } while (opcao > 4 || opcao < 1);
+        if (opcao > 4 || opcao < 1) {
+            System.out.println("OPÇÃO INVÁLIDA");
+        }
 
         return opcao;
     }
@@ -46,7 +47,7 @@ public class Quiz {
 
         do {
             opcaoEscolhida = menu();
-        } while (opcaoEscolhida == 1 || opcaoEscolhida == 2 || opcaoEscolhida == 3 || opcaoEscolhida == 4);
+        } while (opcaoEscolhida == 1 || opcaoEscolhida == 2 || opcaoEscolhida == 3);
     }
 
 }
