@@ -9,21 +9,22 @@ public class Quiz {
         int opcao;
 
         do {
-            System.out.println("---------------- Menu ----------------");
-            System.out.println("--------------------------------------");
-            System.out.println("|                                    |");
-            System.out.println("|           1- INTRUÇÕES             |");
-            System.out.println("|           2- JOGAR                 |");
-            System.out.println("|           3- CRÉDITOS              |");
-            System.out.println("|           4- SAIR                  |");
-            System.out.println("|                                    |");
+            System.out.println();
+            System.out.println("---------------- MENU -----------------");
+            System.out.println("---------------------------------------");
+            System.out.println("|                                     |");
+            System.out.println("|           1- INTRUÇÕES              |");
+            System.out.println("|           2- JOGAR                  |");
+            System.out.println("|           3- CRÉDITOS               |");
+            System.out.println("|           4- SAIR                   |");
+            System.out.println("|                                     |");
             System.out.println("--------------------------------------");
 
             System.out.println();
             System.out.print("DIGITE A OPÇÃO DESEJADA: ");
             opcao = input.nextInt();
 
-            System.out.print("\033[H\033[2J");
+            System.out.print("\033[H\033[2J");// LIMPA O CONSOLE APÓS ESCOLHA
 
             if (opcao < 1 || opcao > 4) {
                 System.out.println("OPÇÃO INVÁLIDA!");
@@ -63,15 +64,14 @@ public class Quiz {
         System.out.println();
     }
 
-    // MÉTODO PARA INICIAR O QUIZ
+    // MÉTODO PRINCIPAL PARA INICIAR O QUIZ
     public static void jogar() {
-        int tentativa = 0;
-        char respostaCorreta = 'a';
-        String resposta = "";
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
 
         do {
             System.out.println();
-            System.out.println("************BOA SORTE************");
             System.out.println("PRIMEIRA PERGUNTA: NEYMAR JOGOU NESSA COPA ?");
             System.out.println("A-) SIM");
             System.out.println("B-) NÃO");
@@ -79,19 +79,41 @@ public class Quiz {
             System.out.println("D-) COM CERTEZA NÃO");
             System.out.println();
 
+            resposta = input.next();
+
             switch (resposta) {
                 case "a":
-                    System.out.println("RESPOSTA CORRETA!");
+                    System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                    acerto = true;
                     break;
 
                 case "b":
-                    System.out.println("RESPOSTA INCORRETA!");
+                    System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    tentativas++;
+                    break;
+
+                case "c":
+                    System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    tentativas++;
+                    break;
+
+                case "d":
+                    System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    tentativas++;
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
                     break;
             }
 
-            tentativa++;
-            System.out.println(tentativa);
-        } while (tentativa < 4 && respostaCorreta != 'a');
+            if (tentativas == 3) {
+                System.out.println("VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
     }
 
     // MÉTODO PARA RETORNAR OS CRÉDITOS
@@ -129,7 +151,7 @@ public class Quiz {
             opcaoEscolhida = menu();
 
             controlador(opcaoEscolhida);
-        } while (opcaoEscolhida != 4);
+        } while (opcaoEscolhida == 1 || opcaoEscolhida == 2 || opcaoEscolhida == 3 || opcaoEscolhida == 4);
     }
 
 }
