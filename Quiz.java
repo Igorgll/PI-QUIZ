@@ -84,12 +84,12 @@ public class Quiz {
             switch (resposta) {
                 case "a":
                     System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                    acerto = true;
+                    acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     break;
 
                 case "b":
                     System.out.println("!--------- RESPOSTA INCORRETA ---------!");
-                    tentativas++;
+                    tentativas++; // CONTADOR DE TENTATIVAS
                     break;
 
                 case "c":
