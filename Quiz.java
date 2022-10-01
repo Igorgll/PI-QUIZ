@@ -9,14 +9,21 @@ public class Quiz {
         int opcao;
 
         do {
-            System.out.println("1- INTRUÇÕES");
-            System.out.println("2- JOGAR");
-            System.out.println("3- CRÉDITOS");
-            System.out.println("4- SAIR");
+            System.out.println("---------------- Menu ----------------");
+            System.out.println("--------------------------------------");
+            System.out.println("|                                    |");
+            System.out.println("|           1- INTRUÇÕES             |");
+            System.out.println("|           2- JOGAR                 |");
+            System.out.println("|           3- CRÉDITOS              |");
+            System.out.println("|           4- SAIR                  |");
+            System.out.println("|                                    |");
+            System.out.println("--------------------------------------");
 
             System.out.println();
             System.out.print("DIGITE A OPÇÃO DESEJADA: ");
             opcao = input.nextInt();
+
+            System.out.print("\033[H\033[2J");
 
             if (opcao < 1 || opcao > 4) {
                 System.out.println("OPÇÃO INVÁLIDA!");
@@ -58,23 +65,44 @@ public class Quiz {
 
     // MÉTODO PARA INICIAR O QUIZ
     public static void jogar() {
-        System.out.println();
-        System.out.println("************BOA SORTE************");
-        System.out.println("PRIMEIRA PERGUNTA: NEYMAR JOGOU NESSA COPA ?");
-        System.out.println("1 - SIM");
-        System.out.println("2 - NÃO");
-        System.out.println();
+        int tentativa = 0;
+        char respostaCorreta = 'a';
+        String resposta = "";
+
+        do {
+            System.out.println();
+            System.out.println("************BOA SORTE************");
+            System.out.println("PRIMEIRA PERGUNTA: NEYMAR JOGOU NESSA COPA ?");
+            System.out.println("A-) SIM");
+            System.out.println("B-) NÃO");
+            System.out.println("C-) TALVEZ");
+            System.out.println("D-) COM CERTEZA NÃO");
+            System.out.println();
+
+            switch (resposta) {
+                case "a":
+                    System.out.println("RESPOSTA CORRETA!");
+                    break;
+
+                case "b":
+                    System.out.println("RESPOSTA INCORRETA!");
+                    break;
+            }
+
+            tentativa++;
+            System.out.println(tentativa);
+        } while (tentativa < 4 && respostaCorreta != 'a');
     }
 
     // MÉTODO PARA RETORNAR OS CRÉDITOS
     public static void creditos() {
         System.out.println("\n****************************CRÉDITOS*****************************");
-        System.out.println("\nEste QUIZ textual foi desenvolvido pelos alunos:"
+        System.out.println("\nEste Quiz foi desenvolvido pelos alunos:"
                 + "\n*Igor Gonçalves Lima"
-                + "\n*Jhon"
-                + "\n*Rony"
-                + "\n*Léo"
-                + "\n*Lucas"
+                + "\n*John Brandy"
+                + "\n*Rony Anderson"
+                + "\n*Leonardo Silva Nascimento"
+                + "\n*Lucas Serrato Bonito"
                 + "\n\nMatéria: Projeto Integrador I"
                 + "\n\nCurso: Tecnologia em Análise e Desenvolvimento de Sistemas"
                 + "\n\nTurma: C | Período: Noturno | Ano: 2022"
@@ -94,7 +122,7 @@ public class Quiz {
 
         System.out.println();
         System.out.println("**************************");
-        System.out.println("Seja Bem Vindo(a) ao Quiz!");
+        System.out.println("Seja Bem Vindo(a) ao Quiz Copa do Mundo!");
         System.out.println();
 
         do {
