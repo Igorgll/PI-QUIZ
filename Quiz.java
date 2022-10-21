@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Quiz {
 
@@ -66,40 +68,100 @@ public class Quiz {
 
     // MÉTODO PRINCIPAL PARA INICIAR O QUIZ
     public static void jogar() {
+        pergunta1();
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 1
+    public static void pergunta1() {
         String resposta;
         boolean acerto = false;
         int tentativas = 0;
+        String perguntas[] = new String[10];
+
+        // VETOR DE PERGUNTAS
+        perguntas[0] = "1- QUEM FOI O MAIOR ARTILHEIRO DAS COPAS DO MUNDO ATÉ O MOMENTO?";
+
+        List<String> alternativas = new ArrayList<String>();
+        alternativas.add("Miroslav Klose"); // RESPOSTA CORRETA
+        alternativas.add("Ronaldo");
+        alternativas.add("Gerd Müller");
+        alternativas.add("Just Fontaine");
 
         do {
+            Collections.shuffle(alternativas);
             System.out.println();
-            System.out.println("PRIMEIRA PERGUNTA: NEYMAR JOGOU NESSA COPA ?");
-            System.out.println("A-) SIM");
-            System.out.println("B-) NÃO");
-            System.out.println("C-) TALVEZ");
-            System.out.println("D-) COM CERTEZA NÃO");
+            System.out.println(perguntas[0]);
             System.out.println();
-
+            System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
             resposta = input.next();
 
             switch (resposta) {
                 case "a":
-                    System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                    acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Miroslav Klose") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
                     break;
 
                 case "b":
-                    System.out.println("!--------- RESPOSTA INCORRETA ---------!");
-                    tentativas++; // CONTADOR DE TENTATIVAS
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Miroslav Klose") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
                     break;
 
                 case "c":
-                    System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
                     tentativas++;
+                    if (alternativas.get(2) == "Miroslav Klose") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
                     break;
 
                 case "d":
-                    System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
                     tentativas++;
+                    if (alternativas.get(3) == "Miroslav Klose") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
                     break;
 
                 default:
@@ -108,12 +170,14 @@ public class Quiz {
             }
 
             if (tentativas == 3) {
+                System.out.println();
                 System.out.println("VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS!");
                 System.out.println();
                 break;
             }
 
         } while (tentativas < 3 && !acerto);
+
     }
 
     // MÉTODO PARA RETORNAR OS CRÉDITOS
@@ -137,6 +201,7 @@ public class Quiz {
         System.out.println("\n*****************");
         System.out.println("SESSÃO FINALIZADA");
         System.out.println("*****************");
+        System.exit(0);
     }
 
     public static void main(String[] args) {
