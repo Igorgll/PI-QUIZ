@@ -69,11 +69,13 @@ public class Quiz {
     // MÉTODO PRINCIPAL PARA INICIAR O QUIZ
     public static void jogar() {
         pergunta1();
+        pergunta2();
+        pergunta3();
     }
 
     public static String getPerguntas(int indice) {
-        String perguntas[] = new String[10];
         // VETOR DE PERGUNTAS
+        String perguntas[] = new String[10];
         perguntas[0] = "1- QUEM FOI O MAIOR ARTILHEIRO DAS COPAS DO MUNDO ATÉ O MOMENTO?";
         perguntas[1] = "2- QUEM SÃO OS MAIORES CAMPEÕES DA COPA DO MUNDO?";
         perguntas[2] = "3- QUANDO FOI REALIZADO A ÚLTIMA COPA DO MUNDO ATÉ O MOMENTO?";
@@ -103,7 +105,7 @@ public class Quiz {
         do {
             Collections.shuffle(alternativas);
             System.out.println();
-            System.out.println(getPerguntas(1));
+            System.out.println(getPerguntas(0));
             System.out.println();
             System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
             System.out.println("b) " + alternativas.get(1));
@@ -170,6 +172,8 @@ public class Quiz {
                     if (alternativas.get(3) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -182,9 +186,9 @@ public class Quiz {
                     break;
             }
 
-            if (tentativas == 3) {
+            if (tentativas >= 3 && acerto == false) {
                 System.out.println();
-                System.out.println("VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS!");
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
                 System.out.println();
                 break;
             }
@@ -192,6 +196,218 @@ public class Quiz {
         } while (tentativas < 3 && !acerto);
 
     }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 2
+    public static void pergunta2() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("Brasil"); // RESPOSTA CORRETA
+        alternativas.add("Alemanha");
+        alternativas.add("Itália");
+        alternativas.add("Argentina");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(1));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Brasil") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Brasil") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "Brasil") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "Brasil") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+        // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 3
+        public static void pergunta3() {
+            String resposta;
+            boolean acerto = false;
+            int tentativas = 0;
+            List<String> alternativas = new ArrayList<String>();
+    
+            alternativas.add("2018"); // RESPOSTA CORRETA
+            alternativas.add("2016");
+            alternativas.add("2014");
+            alternativas.add("2012");
+    
+            do {
+                Collections.shuffle(alternativas);
+                System.out.println();
+                System.out.println(getPerguntas(2));
+                System.out.println();
+                System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
+                System.out.println("b) " + alternativas.get(1));
+                System.out.println("c) " + alternativas.get(2));
+                System.out.println("d) " + alternativas.get(3));
+                System.out.println();
+                resposta = input.next();
+    
+                switch (resposta) {
+                    case "a":
+                    case "A":
+                        System.out.println();
+                        System.out.println(
+                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                        tentativas++;
+                        if (alternativas.get(0) == "2018") {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                            System.out.println("A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        } else {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                        }
+                        break;
+    
+                    case "b":
+                    case "B":
+                        System.out.println();
+                        System.out.println(
+                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                        tentativas++;
+                        if (alternativas.get(1) == "2018") {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        } else {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                        }
+                        break;
+    
+                    case "c":
+                    case "C":
+                        System.out.println();
+                        System.out.println(
+                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                        tentativas++;
+                        if (alternativas.get(2) == "2018") {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        } else {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                        }
+                        break;
+    
+                    case "d":
+                    case "D":
+                        System.out.println();
+                        System.out.println(
+                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                        tentativas++;
+                        if (alternativas.get(3) == "2018") {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        } else {
+                            System.out.println();
+                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                        }
+                        break;
+    
+                    default:
+                        System.out.println("OPÇÃO INVÁLIDA!");
+                        break;
+                }
+    
+                if (tentativas >= 3 && acerto == false) {
+                    System.out.println();
+                    System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                    System.out.println();
+                    break;
+                }
+    
+            } while (tentativas < 3 && !acerto);
+    
+        }
 
     // MÉTODO PARA RETORNAR OS CRÉDITOS
     public static void creditos() {
