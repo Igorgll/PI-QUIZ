@@ -71,6 +71,13 @@ public class Quiz {
         pergunta1();
         pergunta2();
         pergunta3();
+        pergunta4();
+        pergunta5();
+        pergunta6();
+        pergunta7();
+        pergunta8();
+        pergunta9();
+        pergunta10();
     }
 
     public static String getPerguntas(int indice) {
@@ -124,6 +131,9 @@ public class Quiz {
                     if (alternativas.get(0) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
+                        System.out.println("");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -140,6 +150,8 @@ public class Quiz {
                     if (alternativas.get(1) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -156,6 +168,8 @@ public class Quiz {
                     if (alternativas.get(2) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -248,6 +262,7 @@ public class Quiz {
                     if (alternativas.get(1) == "Brasil") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -264,6 +279,7 @@ public class Quiz {
                     if (alternativas.get(2) == "Brasil") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -280,6 +296,7 @@ public class Quiz {
                     if (alternativas.get(3) == "Brasil") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -303,111 +320,905 @@ public class Quiz {
 
     }
 
-        // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 3
-        public static void pergunta3() {
-            String resposta;
-            boolean acerto = false;
-            int tentativas = 0;
-            List<String> alternativas = new ArrayList<String>();
-    
-            alternativas.add("2018"); // RESPOSTA CORRETA
-            alternativas.add("2016");
-            alternativas.add("2014");
-            alternativas.add("2012");
-    
-            do {
-                Collections.shuffle(alternativas);
-                System.out.println();
-                System.out.println(getPerguntas(2));
-                System.out.println();
-                System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
-                System.out.println("b) " + alternativas.get(1));
-                System.out.println("c) " + alternativas.get(2));
-                System.out.println("d) " + alternativas.get(3));
-                System.out.println();
-                resposta = input.next();
-    
-                switch (resposta) {
-                    case "a":
-                    case "A":
-                        System.out.println();
-                        System.out.println(
-                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
-                        tentativas++;
-                        if (alternativas.get(0) == "2018") {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                            System.out.println("A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
-                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        } else {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
-                        }
-                        break;
-    
-                    case "b":
-                    case "B":
-                        System.out.println();
-                        System.out.println(
-                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
-                        tentativas++;
-                        if (alternativas.get(1) == "2018") {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        } else {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
-                        }
-                        break;
-    
-                    case "c":
-                    case "C":
-                        System.out.println();
-                        System.out.println(
-                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
-                        tentativas++;
-                        if (alternativas.get(2) == "2018") {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        } else {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
-                        }
-                        break;
-    
-                    case "d":
-                    case "D":
-                        System.out.println();
-                        System.out.println(
-                                "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
-                        tentativas++;
-                        if (alternativas.get(3) == "2018") {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                            acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        } else {
-                            System.out.println();
-                            System.out.println("!--------- RESPOSTA INCORRETA ---------!");
-                        }
-                        break;
-    
-                    default:
-                        System.out.println("OPÇÃO INVÁLIDA!");
-                        break;
-                }
-    
-                if (tentativas >= 3 && acerto == false) {
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 3
+    public static void pergunta3() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("2018"); // RESPOSTA CORRETA
+        alternativas.add("2016");
+        alternativas.add("2014");
+        alternativas.add("2012");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(2));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
                     System.out.println();
-                    System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
-                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "2018") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
                     break;
-                }
-    
-            } while (tentativas < 3 && !acerto);
-    
-        }
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "2018") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "2018") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "2018") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 4
+    public static void pergunta4() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("Antonio Carbajal (México)"); // RESPOSTA CORRETA
+        alternativas.add("Lothar Matthäus (Alemanha)");
+        alternativas.add("Gianluigi Buffon (Itália)");
+        alternativas.add("Pelé (Brasil)");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(3));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Antonio Carbajal (México)") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Antonio Carbajal (México)") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "Antonio Carbajal (México)") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "Antonio Carbajal (México)") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 5
+    public static void pergunta5() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("Pelé");
+        alternativas.add("Cafú"); // RESPOSTA CORRETA
+        alternativas.add("Messi");
+        alternativas.add("Cristiano Ronaldo");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(4));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Cafú") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Cafú") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "Cafú") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "Cafú") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 6
+    public static void pergunta6() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("Brasil");
+        alternativas.add("Itália");
+        alternativas.add("Uruguai"); // RESPOSTA CORRETA
+        alternativas.add("Argentina");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(5));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0));
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2)); // RESPOSTA CORRETA
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Uruguai") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Uruguai") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "Uruguai") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "Uruguai") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 7
+    public static void pergunta7() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("Cafú");
+        alternativas.add("Maradona");
+        alternativas.add("Puskas");
+        alternativas.add("Pelé"); // RESPOSTA CORRETA
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(6));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0));
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3)); // RESPOSTA CORRETA
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Pelé") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Pelé") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "Pelé") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "Pelé") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 8
+    public static void pergunta8() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("Brasil");
+        alternativas.add("Turquia"); // RESPOSTA CORRETA
+        alternativas.add("Itália");
+        alternativas.add("França");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(7));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0));
+            System.out.println("b) " + alternativas.get(1));// RESPOSTA CORRETA
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Turquia") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Turquia") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "Turquia") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "Turquia") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 9
+    public static void pergunta9() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("1950");
+        alternativas.add("1966"); // RESPOSTA CORRETA
+        alternativas.add("2002");
+        alternativas.add("2014");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(8));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0)); // RESPOSTA CORRETA
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2));
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "1950") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "1950") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "1950") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "1950") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
+
+    // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 9
+    public static void pergunta10() {
+        String resposta;
+        boolean acerto = false;
+        int tentativas = 0;
+        List<String> alternativas = new ArrayList<String>();
+
+        alternativas.add("Morumbi");
+        alternativas.add("Beira Rio");
+        alternativas.add("Arena Corinthians"); // RESPOSTA CORRETA
+        alternativas.add("Castelão");
+
+        do {
+            Collections.shuffle(alternativas);
+            System.out.println();
+            System.out.println(getPerguntas(9));
+            System.out.println();
+            System.out.println("a) " + alternativas.get(0));
+            System.out.println("b) " + alternativas.get(1));
+            System.out.println("c) " + alternativas.get(2)); // RESPOSTA CORRETA
+            System.out.println("d) " + alternativas.get(3));
+            System.out.println();
+            resposta = input.next();
+
+            switch (resposta) {
+                case "a":
+                case "A":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(0) == "Arena Corinthians") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "b":
+                case "B":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(1) == "Arena Corinthians") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "c":
+                case "C":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(2) == "Arena Corinthians") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                case "d":
+                case "D":
+                    System.out.println();
+                    System.out.println(
+                            "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    tentativas++;
+                    if (alternativas.get(3) == "Arena Corinthians") {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println(
+                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                        acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                    } else {
+                        System.out.println();
+                        System.out.println("!--------- RESPOSTA INCORRETA ---------!");
+                    }
+                    break;
+
+                default:
+                    System.out.println("OPÇÃO INVÁLIDA!");
+                    break;
+            }
+
+            if (tentativas >= 3 && acerto == false) {
+                System.out.println();
+                System.out.println("!--------- VOCÊ ESGOTOU A QUANTIDADE DE TENTATIVAS ---------!");
+                System.out.println();
+                break;
+            }
+
+        } while (tentativas < 3 && !acerto);
+
+    }
 
     // MÉTODO PARA RETORNAR OS CRÉDITOS
     public static void creditos() {
