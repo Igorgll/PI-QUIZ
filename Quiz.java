@@ -224,7 +224,6 @@ public class Quiz {
 
         if (acerto) {
             qtPontos = addPontos(qtPontos);
-            System.out.println("Vvalor qtpontos " + qtPontos);
         }
 
     }
@@ -265,8 +264,6 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        qtPontos = addPontos(qtPontos);
-                        System.out.println("Vvalor qtpontos " + qtPontos);
 
                     } else {
                         System.out.println();
@@ -285,8 +282,6 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        qtPontos = addPontos(qtPontos);
-                        System.out.println("Vvalor qtpontos " + qtPontos);
 
                     } else {
                         System.out.println();
@@ -305,8 +300,6 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        qtPontos = addPontos(qtPontos);
-                        System.out.println(qtPontos);
 
                     } else {
                         System.out.println();
@@ -325,8 +318,7 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
-                        qtPontos = addPontos(qtPontos);
-                        System.out.println(qtPontos);
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -346,6 +338,10 @@ public class Quiz {
             }
 
         } while (tentativas < 3 && !acerto);
+
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
 
     }
 
@@ -460,6 +456,10 @@ public class Quiz {
 
         } while (tentativas < 3 && !acerto);
 
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
+
     }
 
     // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 4
@@ -568,6 +568,10 @@ public class Quiz {
             }
 
         } while (tentativas < 3 && !acerto);
+
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
 
     }
 
@@ -682,6 +686,10 @@ public class Quiz {
 
         } while (tentativas < 3 && !acerto);
 
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
+
     }
 
     // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 6
@@ -794,6 +802,10 @@ public class Quiz {
             }
 
         } while (tentativas < 3 && !acerto);
+
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
 
     }
 
@@ -908,6 +920,10 @@ public class Quiz {
 
         } while (tentativas < 3 && !acerto);
 
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
+
     }
 
     // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 8
@@ -1020,6 +1036,10 @@ public class Quiz {
             }
 
         } while (tentativas < 3 && !acerto);
+
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
 
     }
 
@@ -1134,6 +1154,10 @@ public class Quiz {
 
         } while (tentativas < 3 && !acerto);
 
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+        }
+
     }
 
     // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 9
@@ -1246,6 +1270,11 @@ public class Quiz {
             }
 
         } while (tentativas < 3 && !acerto);
+
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+            System.out.println("VOCÊ ACERTOU: " + qtPontos + " perguntas.");
+        }
 
     }
 
