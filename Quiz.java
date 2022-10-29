@@ -6,6 +6,8 @@ public class Quiz {
 
     static Scanner input = new Scanner(System.in);
 
+    static int qtPontos = 0;
+
     // MÉTODO PARA APRESENTAR O MENU E AS OPÇÕES AO USUÁRIO E OBTER A ESCOLHA
     public static int menu() {
         int opcao;
@@ -97,6 +99,13 @@ public class Quiz {
         return retorno;
     }
 
+    public static int addPontos(int pontos) {
+
+        pontos++;
+        System.out.println("Vvalor addPontos pontos " + pontos);
+        return pontos;
+    }
+
     // MÉTODO SEPARADO PARA PERGUNTA NÚMERO 1
     public static void pergunta1() {
         String resposta;
@@ -135,6 +144,7 @@ public class Quiz {
                                 "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
                         System.out.println("");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -153,6 +163,7 @@ public class Quiz {
                         System.out.println(
                                 "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -171,6 +182,7 @@ public class Quiz {
                         System.out.println(
                                 "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -189,6 +201,7 @@ public class Quiz {
                         System.out.println(
                                 "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -208,6 +221,11 @@ public class Quiz {
             }
 
         } while (tentativas < 3 && !acerto);
+
+        if (acerto) {
+            qtPontos = addPontos(qtPontos);
+            System.out.println("Vvalor qtpontos " + qtPontos);
+        }
 
     }
 
@@ -247,6 +265,9 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        qtPontos = addPontos(qtPontos);
+                        System.out.println("Vvalor qtpontos " + qtPontos);
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -264,6 +285,9 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        qtPontos = addPontos(qtPontos);
+                        System.out.println("Vvalor qtpontos " + qtPontos);
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -281,6 +305,9 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        qtPontos = addPontos(qtPontos);
+                        System.out.println(qtPontos);
+
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
@@ -298,6 +325,8 @@ public class Quiz {
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
+                        qtPontos = addPontos(qtPontos);
+                        System.out.println(qtPontos);
                     } else {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA INCORRETA ---------!");
