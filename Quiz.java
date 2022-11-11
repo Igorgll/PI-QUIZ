@@ -28,7 +28,7 @@ public class Quiz {
             System.out.print("DIGITE A OPÇÃO DESEJADA: ");
             opcao = input.nextInt();
 
-            System.out.print("\033[H\033[2J");// LIMPA O CONSOLE APÓS ESCOLHA
+            limpaTerminal();
 
             if (opcao < 1 || opcao > 4) {
                 System.out.println("OPÇÃO INVÁLIDA!");
@@ -36,6 +36,10 @@ public class Quiz {
         } while (opcao < 1 || opcao > 4);
 
         return opcao;
+    }
+
+    public static void limpaTerminal() {
+        System.out.print("\033[H\033[2J");// LIMPA O CONSOLE APÓS ESCOLHA
     }
 
     // MÉTODO CONTROLADOR PARA RETORNAR OS MÉTODOS DE ACORDO COM A ESCOLHA DO
@@ -64,8 +68,11 @@ public class Quiz {
     // MÉTODO PARA RETORNAR AS INSTRUÇÕES AO USUÁRIO
     public static void instrucoes() {
         System.out.println();
-        System.out.println("O QUIZ SERÁ COMPOSTO DE 10 PERGUNTAS COM 4 ALTERNATIVAS CADA");
-        System.out.println();
+        System.out.println("***************** SEJA BEM VINDO(A) AO QUIZ! **********************");
+        System.out.println("O QUIZ SERÁ COMPOSTO DE 10 PERGUNTAS RELACIONADAS AS COPAS DO MUNDO.");
+        System.out.println("PARA CADA PERGUNTA VOCÊ TERÁ 4 ALTERNATIVAS E 3 TENTATIVAS PARA ACERTÁ-LA.");
+        System.out.println("A CADA ACERTO VOCÊ RECEBE 10 PONTOS.");
+        System.out.println("*******************************************************************");
     }
 
     // MÉTODO PRINCIPAL PARA INICIAR O QUIZ
@@ -100,7 +107,6 @@ public class Quiz {
     }
 
     public static int addPontos(int pontos) {
-
         pontos++;
         System.out.println("Vvalor addPontos pontos " + pontos);
         return pontos;
@@ -129,6 +135,8 @@ public class Quiz {
             System.out.println("d) " + alternativas.get(3));
             System.out.println();
             resposta = input.next();
+
+            limpaTerminal();
 
             switch (resposta) {
                 case "a":
@@ -252,6 +260,8 @@ public class Quiz {
             System.out.println();
             resposta = input.next();
 
+            limpaTerminal();
+
             switch (resposta) {
                 case "a":
                 case "A":
@@ -368,6 +378,8 @@ public class Quiz {
             System.out.println("d) " + alternativas.get(3));
             System.out.println();
             resposta = input.next();
+
+            limpaTerminal();
 
             switch (resposta) {
                 case "a":
@@ -486,6 +498,8 @@ public class Quiz {
             System.out.println();
             resposta = input.next();
 
+            limpaTerminal();
+
             switch (resposta) {
                 case "a":
                 case "A":
@@ -598,6 +612,8 @@ public class Quiz {
             System.out.println("d) " + alternativas.get(3));
             System.out.println();
             resposta = input.next();
+
+            limpaTerminal();
 
             switch (resposta) {
                 case "a":
@@ -716,6 +732,8 @@ public class Quiz {
             System.out.println();
             resposta = input.next();
 
+            limpaTerminal();
+
             switch (resposta) {
                 case "a":
                 case "A":
@@ -832,6 +850,8 @@ public class Quiz {
             System.out.println("d) " + alternativas.get(3)); // RESPOSTA CORRETA
             System.out.println();
             resposta = input.next();
+
+            limpaTerminal();
 
             switch (resposta) {
                 case "a":
@@ -950,6 +970,8 @@ public class Quiz {
             System.out.println();
             resposta = input.next();
 
+            limpaTerminal();
+
             switch (resposta) {
                 case "a":
                 case "A":
@@ -1067,6 +1089,8 @@ public class Quiz {
             System.out.println();
             resposta = input.next();
 
+            limpaTerminal();
+
             switch (resposta) {
                 case "a":
                 case "A":
@@ -1183,6 +1207,8 @@ public class Quiz {
             System.out.println("d) " + alternativas.get(3));
             System.out.println();
             resposta = input.next();
+
+            limpaTerminal();
 
             switch (resposta) {
                 case "a":
