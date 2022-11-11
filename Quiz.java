@@ -108,7 +108,6 @@ public class Quiz {
 
     public static int addPontos(int pontos) {
         pontos++;
-        System.out.println("Vvalor addPontos pontos " + pontos);
         return pontos;
     }
 
@@ -1299,7 +1298,7 @@ public class Quiz {
 
         if (acerto) {
             qtPontos = addPontos(qtPontos);
-            System.out.println("VOCÊ ACERTOU: " + qtPontos + " perguntas.");
+            System.out.println("VOCÊ ACERTOU: " + qtPontos + " perguntas e atingiu um score de " + qtPontos + "0 pontos");
         }
 
     }
