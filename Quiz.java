@@ -1486,7 +1486,8 @@ public class Quiz {
         if (acerto) {
             qtPontos = addPontos(qtPontos);
             System.out
-                    .println("VOCÊ ACERTOU: " + qtPontos + " perguntas e atingiu um score de " + qtPontos + "0 pontos.");
+                    .println(
+                            "VOCÊ ACERTOU: " + qtPontos + " perguntas e atingiu um score de " + qtPontos + "0 pontos.");
         }
 
     }
