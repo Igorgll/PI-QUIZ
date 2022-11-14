@@ -69,9 +69,11 @@ public class Quiz {
     public static void instrucoes() {
         System.out.println();
         System.out.println("***************** SEJA BEM VINDO(A) AO QUIZ! **********************");
+        System.out.println();
         System.out.println("O QUIZ SERÁ COMPOSTO DE 10 PERGUNTAS RELACIONADAS AS COPAS DO MUNDO.");
         System.out.println("PARA CADA PERGUNTA VOCÊ TERÁ 4 ALTERNATIVAS E 3 TENTATIVAS PARA ACERTÁ-LA.");
         System.out.println("A CADA ACERTO VOCÊ RECEBE 10 PONTOS.");
+        System.out.println();
         System.out.println("*******************************************************************");
     }
 
@@ -104,6 +106,23 @@ public class Quiz {
         perguntas[9] = "10- EM QUAL ESTÁDIO FOI A ABERTURA DA COPA DO MUNDO EM 2014?";
         String retorno = perguntas[indice];
         return retorno;
+    }
+
+    public static String getRespostaDescricao(int indice) {
+        // VETOR DAS DESCRIÇÕES DAS PERGUNTAS
+        String descricao[] = new String[10];
+        descricao[0] = "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.";
+        descricao[1] = "Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).";
+        descricao[2] = "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.";
+        descricao[3] = "Antonio Carbajal (México) 1950/1954/1958/1962/1966.";
+        descricao[4] = "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.";
+        descricao[5] = "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.";
+        descricao[6] = "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.";
+        descricao[7] = "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.";
+        descricao[8] = "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.";
+        descricao[9] = "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.";
+        String retornaDesc = descricao[indice];
+        return retornaDesc;
     }
 
     public static int addPontos(int pontos) {
@@ -143,13 +162,17 @@ public class Quiz {
                     System.out.println();
                     System.out.println(
                             "!--------- VOCÊ SELECIONOU ALTERNATIVA " + resposta.toUpperCase() + " ---------!");
+                    System.out.println();
                     tentativas++;
                     if (alternativas.get(0) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
-                        System.out.println("");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(0));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -167,8 +190,12 @@ public class Quiz {
                     if (alternativas.get(1) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println();
                         System.out.println(
-                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(0));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -186,8 +213,12 @@ public class Quiz {
                     if (alternativas.get(2) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println();
                         System.out.println(
-                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(0));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -205,8 +236,12 @@ public class Quiz {
                     if (alternativas.get(3) == "Miroslav Klose") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
+                        System.out.println();
                         System.out.println(
-                                "Miroslav Josef Klose é o nome com mais gols marcados na história da Copa do Mundo, com 16 gols pela seleção da Alemanha.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(0));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -271,7 +306,12 @@ public class Quiz {
                     if (alternativas.get(0) == "Brasil") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(1));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -289,7 +329,12 @@ public class Quiz {
                     if (alternativas.get(1) == "Brasil") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(1));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -307,7 +352,12 @@ public class Quiz {
                     if (alternativas.get(2) == "Brasil") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(1));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -325,7 +375,12 @@ public class Quiz {
                     if (alternativas.get(3) == "Brasil") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Brasil possui 5 títulos da Copa do Mundo (1958, 1962, 1970, 1994 e 2002).");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(1));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
 
                     } else {
@@ -391,7 +446,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(2));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -409,7 +468,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(2));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -427,7 +490,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(2));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -445,7 +512,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A última Copa foi em 2018, na Rússia, com o título da França em cima da Croácia.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(2));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -509,7 +580,12 @@ public class Quiz {
                     if (alternativas.get(0) == "Antonio Carbajal (México)") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(3));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -526,7 +602,12 @@ public class Quiz {
                     if (alternativas.get(1) == "Antonio Carbajal (México)") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(3));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -543,7 +624,12 @@ public class Quiz {
                     if (alternativas.get(2) == "Antonio Carbajal (México)") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(3));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -560,7 +646,12 @@ public class Quiz {
                     if (alternativas.get(3) == "Antonio Carbajal (México)") {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
-                        System.out.println("Antonio Carbajal (México) 1950/1954/1958/1962/1966");
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(3));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -625,7 +716,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(4));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -643,7 +738,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(4));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -661,7 +760,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(4));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -679,7 +782,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O jogador que mais vezes disputou jogos de finais da Copa do Mundo, em anos consecutivos, foi o Brasileiro Cafú.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(4));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -744,7 +851,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(5));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -762,7 +873,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(5));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -780,7 +895,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(5));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -798,7 +917,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "O Uruguai enfrentou a Argentina na final e venceu por 4 a 2. A primeira Copa do Mundo ocorreu em 1930.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(5));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -863,7 +986,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(6));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -881,7 +1008,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(6));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -899,7 +1030,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(6));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -917,7 +1052,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Pelé o atacante brasileiro é o maior campeão de Copas do Mundo na história da competição.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(6));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -982,7 +1121,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                                "--------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(7));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1000,7 +1143,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                                "--------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(7));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1018,7 +1165,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                                "--------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(7));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1036,7 +1187,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "No duelo entre Turquia e Coreia do Sul, Hakan Shakur, atacante turco, brilhou ao marcar o gol mais rápido da história dos mundias, aos 11 segundos de jogo.");
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(7));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1101,7 +1256,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(8));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1119,7 +1278,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(8));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1137,7 +1300,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(8));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1155,7 +1322,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "A Copa do Mundo FIFA de 1950 ou campeonato do Mundo da FIFA 1950, foi a quarta edição deste evento esportivo, um torneio internacional de futebol masculino organizado pela Federação Internacional de Futebol (FIFA), que ocorreu no Brasil, anfitrião da competição pela primeira vez.");
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(8));
+                        System.out.println(
+                                "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1220,7 +1391,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(9));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1238,7 +1413,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(9));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1256,7 +1435,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(9));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1274,7 +1457,11 @@ public class Quiz {
                         System.out.println();
                         System.out.println("!--------- RESPOSTA CORRETA ---------!");
                         System.out.println(
-                                "Abertura da Copa do Mundo de 2014 no Brasil, realizada na Arena Corinthians, em São Paulo.");
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println(getRespostaDescricao(9));
+                        System.out.println(
+                                "----------------------------------------------------------------------------------------------------------------------------");
+                        System.out.println();
                         acerto = true; // VARIÁVEL BOOLEANA PARA CONFERIR RESPOSTA CORRETA
                     } else {
                         System.out.println();
@@ -1298,7 +1485,8 @@ public class Quiz {
 
         if (acerto) {
             qtPontos = addPontos(qtPontos);
-            System.out.println("VOCÊ ACERTOU: " + qtPontos + " perguntas e atingiu um score de " + qtPontos + "0 pontos");
+            System.out
+                    .println("VOCÊ ACERTOU: " + qtPontos + " perguntas e atingiu um score de " + qtPontos + "0 pontos.");
         }
 
     }
